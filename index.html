@@ -2128,7 +2128,7 @@ function renderDrawer(){
   const chip=n.status==='sourced'?'sourced':n.status==='reported'?'reported':'gap';
   const chipLbl=n.status==='sourced'?'Sourced':n.status==='reported'?'Reported':'To prove';
   let stamp='<span class="chip '+chip+'">'+chipLbl+'</span>'+(n.kind==='founder'?' <span class="chip" style="color:var(--stamp);border:1.4px solid var(--stamp)">Founding immigrant</span>':'');
-  if(n.id!=='joel'&&pathUp('joel',n.id)) stamp+=' <button class="d-act tr" data-act="trail">Trace to Joel</button>';
+  if(n.id!=='joel'&&pathUp('joel',n.id)) stamp+=' <button class="d-act tr" data-act="trail">Trace to Joel and Stephen</button>';
   if((n.parents||[]).length&&n.gen>=1) stamp+=' <button class="d-act" data-act="base">⌖ Base the tree here</button>';
   (VIEWDATA.stories||[]).forEach(s=>{
     if(s.open.some(o=>o[0]===n.id)) stamp+=' <button class="d-act st" data-act="story" data-story="'+s.k+'">✦ Story: '+s.short+'</button>';
